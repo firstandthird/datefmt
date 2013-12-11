@@ -6,6 +6,7 @@
  * copyright First + Third 2013
  * MIT License
 */
+
 /**
  * Simple date and time formatter based on php's date() syntax.
  */
