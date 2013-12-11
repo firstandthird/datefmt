@@ -1,0 +1,8 @@
+{
+  "name": "dateformat",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "fatjs": "~0.1.0"
+  }
+}
