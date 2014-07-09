@@ -1,9 +1,8 @@
-
 /*!
  * dateformat - Date format lib
- * v0.1.0
+ * v0.3.0
  * https://github.com/firstandthird/dateformat
- * copyright First + Third 2013
+ * copyright First + Third 2014
  * MIT License
 */
 /**
@@ -91,4 +90,4 @@
 
   w.dateFormat = dateFormat;
 
-})(window);
+})(window || exports);

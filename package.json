@@ -1,6 +1,7 @@
 {
   "name": "datefmt",
-  "version": "0.0.0",
+  "version": "0.3.0",
+  "main": "dist/dateformat.js",
   "devDependencies": {
     "fatjs": "~0.1.0",
     "grunt": "~0.4.2"
