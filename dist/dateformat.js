@@ -1,6 +1,6 @@
 /*!
  * dateformat - Date format lib
- * v0.3.0
+ * v0.4.0
  * https://github.com/firstandthird/dateformat
  * copyright First + Third 2014
  * MIT License
@@ -10,7 +10,8 @@
  */
 
 (function(w) {
-  var oldRef = w.dateFormat;
+  var root = this;
+  var oldRef = root.dateFormat;
 
   var months = 'January|February|March|April|May|June|July|August|September|October|November|December'.split('|');
   var days = 'Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday'.split('|');
@@ -84,10 +85,17 @@
   };
 
   dateFormat.noConflict = function() {
-    w.dateFormat = oldRef;
+    root.dateFormat = oldRef;
     return dateFormat;
   };
 
-  w.dateFormat = dateFormat;
+  if(typeof exports !== 'undefined') {
+    if(typeof module !== 'undefined' && module.exports) {
+      exports = module.exports = dateFormat;
+    }
+    exports.dateFormat = dateFormat;
+  } else {
+    root.dateFormat = dateFormat;
+  }
 
-})(window || exports);
+}).call(this);
