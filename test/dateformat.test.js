@@ -1,4 +1,4 @@
-
+/* global suite, assert, test, dateFormat */
 suite('dateFormat', function() {
   test('day', function() {
     var date = new Date(2013, 4, 8);
@@ -13,11 +13,15 @@ suite('dateFormat', function() {
   test('month', function() {
     var date = new Date(2013, 3, 15);
 
-    assert.equal(dateFormat('%n %F %m %M', date), '3 April 04 Apr');
+    assert.equal(dateFormat('%n %F %m %M', date), '4 April 04 Apr');
 
     var date2 = new Date(2013, 11, 15);
 
-    assert.equal(dateFormat('%n %F %m %M', date2), '11 December 12 Dec');
+    assert.equal(dateFormat('%n %F %m %M', date2), '12 December 12 Dec');
+
+    var date3 = new Date(2013, 12, 15);
+
+    assert.equal(dateFormat('%n %F %m %M', date3), '1 January 01 Jan');
   });
 
   test('week', function() {
