@@ -1,6 +1,6 @@
 /*!
  * dateformat - Date format lib
- * v0.4.0
+ * v0.4.1
  * https://github.com/firstandthird/dateformat
  * copyright First + Third 2014
  * MIT License
@@ -50,7 +50,7 @@
         case '%M':
           return months[time.getMonth()].substr(0,3);
         case '%n':
-          return time.getMonth();
+          return time.getMonth() + 1;
         case '%Y':
           return time.getFullYear();
         case '%y':
