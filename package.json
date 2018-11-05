@@ -1,9 +1,53 @@
 {
   "name": "datefmt",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Date format lib",
+  "main": "dist/dateformat.js",
+  "module": "lib/dateformat.js",
+  "scripts": {
+    "start": "scriptkit",
+    "build": "scriptkit build",
+    "dev": "scriptkit dev",
+    "test": "cat test/datefmt.test.js | tape-run --static . --browser phantomjs --render tap-spec",
+    "prepublishOnly": "scriptkit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firstandthird/datefmt"
+  },
+  "author": "First+Third",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/firstandthird/datefmt/issues"
+  },
+  "homepage": "https://github.com/firstandthird/datefmt#readme",
   "devDependencies": {
-    "fatjs": "~0.1.0",
-    "grunt": "~0.4.2"
+    "eslint": "^5.8.0",
+    "eslint-config-firstandthird": "^4.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "phantomjs-prebuilt": "^2.1.16",
+    "scriptkit": "^1.0.0",
+    "tap-spec": "^5.0.0",
+    "tape-rollup": "^4.6.4",
+    "tape-run": "^4.0.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "extends": "firstandthird"
+  },
+  "scriptkit": {
+    "files": {
+      "dist/datefmt.js": "lib/dateformat.js",
+      "test/datefmt.test.dist.js": "test/datefmt.test.js"
+    },
+    "scripts": {
+      "babel": {
+        "exclude": [
+          "node_modules/tape-rollup/*"
+        ]
+      }
+    }
   }
 }

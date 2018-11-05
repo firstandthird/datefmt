@@ -6,6 +6,10 @@
   </head>
   <body>
 
-    <script src="../dist/datefmt.js"></script>
+    <script src="../lib/dateformat.js"></script>
+    <script>
+      let date = new Date(2013, 4, 8);
+      console.log(datefmt('%j %D %l', date));
+    </script>
   </body>
 </html>
