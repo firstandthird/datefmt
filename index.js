@@ -1,11 +1,8 @@
-const root = this;
-const oldRef = root.datefmt;
-
 let months = 'January|February|March|April|May|June|July|August|September|October|November|December'.split('|');
 let days = 'Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday'.split('|');
 
 const datefmt = function(format, time) {
-  if (!time instanceof Date) return;
+  if (!time instanceof Date) { return; }
   const date = format.replace(/%d|%D|%j|%l|%S|%w|%F|%m|%M|%n|%Y|%y|%a|%A|%g|%G|%h|%H|%i|%s|%u|%e/g, (match) => {
     // eslint-disable-next-line default-case
     switch (match) {
@@ -71,16 +68,4 @@ datefmt.translate = function(transMonths, transDays) {
   days = transDays;
 };
 
-datefmt.noConflict = function() {
-  root.datefmt = oldRef;
-  return datefmt;
-};
-
-if (typeof exports !== 'undefined') {
-  if (typeof module !== 'undefined' && module.exports) {
-    exports = module.exports = datefmt;
-  }
-  exports.datefmt = datefmt;
-} else {
-  root.datefmt = datefmt;
-}
+module.exports = datefmt;

@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "Date format lib",
   "main": "dist/dateformat.js",
-  "module": "lib/dateformat.js",
+  "module": "index.js",
   "scripts": {
     "start": "scriptkit",
     "build": "scriptkit build",
     "dev": "scriptkit dev",
-    "test": "cat test/datefmt.test.js | tape-run --static . --browser phantomjs --render tap-spec",
+    "test": "cat test/datefmt.test.dist.js | tape-run --static . --browser phantomjs --render tap-spec",
     "prepublishOnly": "scriptkit"
   },
   "repository": {
@@ -39,7 +39,7 @@
   },
   "scriptkit": {
     "files": {
-      "dist/datefmt.js": "lib/dateformat.js",
+      "dist/datefmt.js": "index.js",
       "test/datefmt.test.dist.js": "test/datefmt.test.js"
     },
     "scripts": {
