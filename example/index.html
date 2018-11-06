@@ -2,10 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>dateformat example</title>
+    <title>datefmt example</title>
   </head>
   <body>
 
-    <script src="../dist/dateformat.js"></script>
+    <script src="../dist/datefmt.js"></script>
+    <script>
+      var date = new Date(2013, 4, 8);
+      console.log(Datefmt('%j %D %l', date));
+    </script>
   </body>
 </html>
