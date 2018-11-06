@@ -3,7 +3,7 @@
   "version": "0.4.1",
   "main": "dist/dateformat.js",
   "devDependencies": {
-    "fatjs": "~0.2.0",
-    "grunt": "~1.0.1"
+    "fatjs": "~0.1.0",
+    "grunt": "~0.4.2"
   }
 }
